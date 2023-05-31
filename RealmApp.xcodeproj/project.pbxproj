@@ -13,6 +13,7 @@
 		66919DDB2A2794EE0079E377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66919DD92A2794EE0079E377 /* Main.storyboard */; };
 		66919DDD2A2794EE0079E377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66919DDC2A2794EE0079E377 /* Assets.xcassets */; };
 		66919DE02A2794EE0079E377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66919DDE2A2794EE0079E377 /* LaunchScreen.storyboard */; };
+		66919DED2A27955C0079E377 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66919DEC2A27955C0079E377 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		66919DDC2A2794EE0079E377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66919DDF2A2794EE0079E377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66919DE12A2794EE0079E377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66919DEC2A27955C0079E377 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		66919DD22A2794EE0079E377 /* RealmApp */ = {
 			isa = PBXGroup;
 			children = (
-				66919DD32A2794EE0079E377 /* AppDelegate.swift */,
-				66919DD52A2794EE0079E377 /* SceneDelegate.swift */,
-				66919DD72A2794EE0079E377 /* ViewController.swift */,
-				66919DD92A2794EE0079E377 /* Main.storyboard */,
-				66919DDC2A2794EE0079E377 /* Assets.xcassets */,
-				66919DDE2A2794EE0079E377 /* LaunchScreen.storyboard */,
+				66919DE72A2795130079E377 /* App */,
+				66919DE82A27951C0079E377 /* ViewControllers */,
+				66919DEB2A2795420079E377 /* Services */,
+				66919DE92A27952A0079E377 /* Storyboards */,
+				66919DEA2A2795370079E377 /* Resources */,
 				66919DE12A2794EE0079E377 /* Info.plist */,
 			);
 			path = RealmApp;
+			sourceTree = "<group>";
+		};
+		66919DE72A2795130079E377 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				66919DD32A2794EE0079E377 /* AppDelegate.swift */,
+				66919DD52A2794EE0079E377 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		66919DE82A27951C0079E377 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				66919DD72A2794EE0079E377 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		66919DE92A27952A0079E377 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				66919DD92A2794EE0079E377 /* Main.storyboard */,
+				66919DDE2A2794EE0079E377 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		66919DEA2A2795370079E377 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66919DDC2A2794EE0079E377 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66919DEB2A2795420079E377 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				66919DEC2A27955C0079E377 /* StorageManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +184,7 @@
 				66919DD82A2794EE0079E377 /* ViewController.swift in Sources */,
 				66919DD42A2794EE0079E377 /* AppDelegate.swift in Sources */,
 				66919DD62A2794EE0079E377 /* SceneDelegate.swift in Sources */,
+				66919DED2A27955C0079E377 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
