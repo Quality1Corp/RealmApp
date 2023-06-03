@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TaskListViewController: UITableViewController {
     
-    private var taskLists: [TaskList] = []
+    // MARK: - Private Properties
+    private var taskLists: Results<TaskList>!
     private let storageManager = StorageManager.shared
+    private let dataManager = DataManager.shared
     
-    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         let addButton = UIBarButtonItem(
@@ -22,6 +25,14 @@ class TaskListViewController: UITableViewController {
         )
         navigationItem.leftBarButtonItem = addButton
         navigationItem.rightBarButtonItem = editButtonItem
+        
+        taskLists = storageManager.realm.objects(TaskList.self)
+        createTempData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     // MARK: - UITableViewDataSource
@@ -32,13 +43,12 @@ class TaskListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskListCell", for: indexPath)
         let taskList = taskLists[indexPath.row]
-        var content = cell.defaultContentConfiguration()
         
+        var content = cell.defaultContentConfiguration()
         content.text = taskList.title
         content.secondaryText = taskList.tasks.count.formatted()
         cell.contentConfiguration = content
         return cell
-        
     }
     
     // MARK: - UITableViewDelegate
@@ -82,6 +92,15 @@ class TaskListViewController: UITableViewController {
     @objc private func addButtonPressed() {
         showAlert()
     }
+    
+    private func createTempData() {
+        if !UserDefaults.standard.bool(forKey: "done") {
+            dataManager.createTempData { [unowned self] in
+                UserDefaults.standard.set(true, forKey: "done")
+                tableView.reloadData()
+            }
+        }
+    }
 }
 
 // MARK: - AlertController
@@ -110,6 +129,9 @@ extension TaskListViewController {
     }
     
     private func save(taskList: String) {
-        
+        storageManager.save(taskList) { taskList in
+            let rowIndex = IndexPath(row: taskLists.index(of: taskList) ?? 0, section: 0)
+            tableView.insertRows(at: [rowIndex], with: .automatic)
+        }
     }
 }
