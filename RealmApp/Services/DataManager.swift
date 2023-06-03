@@ -22,17 +22,17 @@ final class DataManager {
                 "Movies List",
                 Date(),
                 [
-                    ["Green Book"] as [Any],
-                    ["The Shawshank Redemption", "View today", Date(), true]
+                    ["The Shawshank Redemption"] as [Any],
+                    ["Green Book", "View today", Date(), true]
                 ]
             ] as [Any]
         )
         
         let milk = Task()
-        milk.title = "Milk"
-        milk.note = "2L"
+        milk.title = "Carrot"
+        milk.note = "2 kg"
         
-        let apples = Task(value: ["Apples", "1.5KG"])
+        let apples = Task(value: ["Apples", "3 kg"])
         let bread = Task(value: ["title": "Bread", "isComplete": true] as [String : Any])
         
         shoppingList.tasks.append(milk)
