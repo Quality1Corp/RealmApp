@@ -20,10 +20,10 @@ final class DataManager {
         let moviesList = TaskList(
             value: [
                 "Movies List",
-                Data(),
+                Date(),
                 [
                     ["Green Book"] as [Any],
-                    ["The Shawshank Redemption", "View today", Data(), true]
+                    ["The Shawshank Redemption", "View today", Date(), true]
                 ]
             ] as [Any]
         )
