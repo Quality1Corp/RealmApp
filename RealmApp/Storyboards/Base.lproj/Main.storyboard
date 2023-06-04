@@ -23,7 +23,7 @@
                                 <segment title="A-Z"/>
                             </segments>
                             <connections>
-                                <action selector="sortingList:" destination="xvQ-jY-c3T" eventType="touchUpInside" id="wgR-rc-34t"/>
+                                <action selector="sortingList:" destination="xvQ-jY-c3T" eventType="valueChanged" id="SLD-K6-37p"/>
                             </connections>
                         </segmentedControl>
                         <prototypes>
