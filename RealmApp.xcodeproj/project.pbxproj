@@ -17,6 +17,7 @@
 		66919DED2A27955C0079E377 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66919DEC2A27955C0079E377 /* StorageManager.swift */; };
 		6697AACF2A2A509900B92A88 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6697AACE2A2A509900B92A88 /* Realm */; };
 		6697AAD12A2A509900B92A88 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6697AAD02A2A509900B92A88 /* RealmSwift */; };
+		66EA0A392A2C8A4700F4924B /* Extension + UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA0A382A2C8A4700F4924B /* Extension + UITableViewCell.swift */; };
 		66FB1B972A28BAC600219884 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FB1B962A28BAC600219884 /* TaskList.swift */; };
 		66FB1B992A28BDF300219884 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FB1B982A28BDF300219884 /* TasksViewController.swift */; };
 		66FB1B9B2A28D2D900219884 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FB1B9A2A28D2D900219884 /* DataManager.swift */; };
@@ -33,6 +34,7 @@
 		66919DDF2A2794EE0079E377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66919DE12A2794EE0079E377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66919DEC2A27955C0079E377 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		66EA0A382A2C8A4700F4924B /* Extension + UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITableViewCell.swift"; sourceTree = "<group>"; };
 		66FB1B962A28BAC600219884 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		66FB1B982A28BDF300219884 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		66FB1B9A2A28D2D900219884 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				66919DE82A27951C0079E377 /* ViewControllers */,
 				66919DEB2A2795420079E377 /* Services */,
 				66919DE92A27952A0079E377 /* Storyboards */,
+				66EA0A372A2C89E200F4924B /* Extensions */,
 				668D4DC42A28B7C700534552 /* Factories */,
 				66919DEA2A2795370079E377 /* Resources */,
 				66919DE12A2794EE0079E377 /* Info.plist */,
@@ -132,6 +135,14 @@
 				66FB1B9A2A28D2D900219884 /* DataManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		66EA0A372A2C89E200F4924B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66EA0A382A2C8A4700F4924B /* Extension + UITableViewCell.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		66FB1B952A28BA6100219884 /* Models */ = {
@@ -226,6 +237,7 @@
 				66919DD82A2794EE0079E377 /* TaskListViewController.swift in Sources */,
 				66FB1B992A28BDF300219884 /* TasksViewController.swift in Sources */,
 				66919DD42A2794EE0079E377 /* AppDelegate.swift in Sources */,
+				66EA0A392A2C8A4700F4924B /* Extension + UITableViewCell.swift in Sources */,
 				66919DD62A2794EE0079E377 /* SceneDelegate.swift in Sources */,
 				66919DED2A27955C0079E377 /* StorageManager.swift in Sources */,
 			);
